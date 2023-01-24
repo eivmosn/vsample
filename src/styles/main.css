@@ -9,3 +9,7 @@
     --vsample-primary: rgba(84, 84, 84, .48);
     --vsample-border: rgba(84, 84, 84, .48);
 }
+
+.n-config-provider {
+    height: 100%;
+}

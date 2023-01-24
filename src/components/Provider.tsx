@@ -2,10 +2,19 @@ import Dialog from './Dialog'
 import Message from './Message'
 import Loading from './Loading'
 import Notification from './Notification'
+import { useThemeStore } from '@/stores/theme'
 
 export default defineComponent({
+  setup() {
+    const theme = useThemeStore()
+
+    return {
+      theme,
+    }
+  },
   render() {
-    return <n-config-provider>
+    const { theme } = this
+    return <n-config-provider theme={theme.color} theme-overrides={theme.themeOverrides}>
             <n-loading-bar-provider>
                 <Loading />
                 <n-dialog-provider>
@@ -14,7 +23,7 @@ export default defineComponent({
                         <Notification />
                         <n-message-provider>
                             <Message />
-                            <n-el class="bg-[var(--card-color)]">
+                            <n-el class="bg-[var(--card-color)] h-full">
                                 {
                                     this.$slots.default && this.$slots.default()
                                 }
