@@ -4,7 +4,7 @@
   "version": "1.0.0",
   "type": "module",
   "scripts": {
-    "dev": "vite",
+    "dev": "vite --open --port 5543",
     "build": "vue-tsc && vite build",
     "preview": "vite preview",
     "preinstall": "npx only-allow pnpm"
