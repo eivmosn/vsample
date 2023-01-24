@@ -3,6 +3,6 @@ export default defineComponent({
 
   },
   render() {
-    return <div>HelloWorld</div>
+    return <div>{this.$t('welcome')}</div>
   },
 })
