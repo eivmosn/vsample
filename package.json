@@ -5,8 +5,9 @@
   "type": "module",
   "scripts": {
     "dev": "vite --open --port 5543",
-    "build": "vue-tsc && vite build",
+    "build": "vite build",
     "preview": "vite preview",
+    "typecheck": "vue-tsc --noEmit",
     "preinstall": "npx only-allow pnpm"
   },
   "dependencies": {
